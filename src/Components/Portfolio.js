@@ -24,7 +24,7 @@ const Portfolio = () => {
           <div className="introduction">
             <p>As I was pursuing a job for a higher web developer position,
                 I had never thought I'd encounter such a challenging question on the board during an interview. For an intermediate web developer like me,
-              it almost made me use my <a href="https://lh3.googleusercontent.com/proxy/NagV5jfiT78_Yl6rnRywRuvmJ9uCJRWqtTv3DPGFsiKevauyF3HbcgLagKpVAWaiqhOqN-yy7QWu523beax-ADbn76NDAoWyGfM" target="_blank" rel="noopener noreferrer">Roni Carbine Gun</a>.</p>
+              it almost made me use my <a href="http://www.imfdb.org/wiki/CAA_Tactical_RONI" target="_blank" rel="noopener noreferrer">Roni Carbine Gun</a>.</p>
             <p style={{ textAlign: 'center' }}>My demos here will use <a href="https://en.wikipedia.org/wiki/Recursion_(computer_science)" target="_blank" alt="Recursive Algorithm" rel="noopener noreferrer">Recursive Algorithm</a> to solve games in pure <kbd>JavaScript</kbd>.</p>
           </div>
         </article>
