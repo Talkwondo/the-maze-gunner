@@ -1,6 +1,6 @@
 {
   "name": "the-maze-gunner",
-  "homepage" : "https://talkwondo.github.io/the-maze-gunner",
+  "homepage": "https://talkwondo.github.io/the-maze-gunner",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
