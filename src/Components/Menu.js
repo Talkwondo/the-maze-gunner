@@ -7,16 +7,21 @@ const Menu = () => {
     <MenuTag inverted fixed="top">
       <MenuTag.Item
         link
-        name='Tal Talmon Portfolio'
-        href="mailto: tal@tkd.co.il"
+        name='GitHub'
+        href="https://github.com/Talkwondo/"
+        target="_blank"
       />
-
       <MenuTag.Item
-        position='right'
         link
         name='Linkdin'
         href="https://www.linkedin.com/in/tal-talmon/"
         target="_blank"
+      />
+      <MenuTag.Item
+        position='right'
+        link
+        name='Tal Talmon Portfolio'
+        href="mailto: tal@tkd.co.il"
       />
     </MenuTag>
   )
