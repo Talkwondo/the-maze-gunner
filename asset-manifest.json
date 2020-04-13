@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/the-maze-gunner/static/css/main.24d63ffe.chunk.css",
-    "main.js": "/the-maze-gunner/static/js/main.32a0babd.chunk.js",
-    "main.js.map": "/the-maze-gunner/static/js/main.32a0babd.chunk.js.map",
+    "main.js": "/the-maze-gunner/static/js/main.60c31e98.chunk.js",
+    "main.js.map": "/the-maze-gunner/static/js/main.60c31e98.chunk.js.map",
     "runtime-main.js": "/the-maze-gunner/static/js/runtime-main.8d3439e7.js",
     "runtime-main.js.map": "/the-maze-gunner/static/js/runtime-main.8d3439e7.js.map",
     "static/js/2.2430ba27.chunk.js": "/the-maze-gunner/static/js/2.2430ba27.chunk.js",
     "static/js/2.2430ba27.chunk.js.map": "/the-maze-gunner/static/js/2.2430ba27.chunk.js.map",
     "index.html": "/the-maze-gunner/index.html",
-    "precache-manifest.69ed3e56685c4f3e8709610538fc3eb0.js": "/the-maze-gunner/precache-manifest.69ed3e56685c4f3e8709610538fc3eb0.js",
+    "precache-manifest.7b288a0f0dbf510f1049bdef290d3a18.js": "/the-maze-gunner/precache-manifest.7b288a0f0dbf510f1049bdef290d3a18.js",
     "service-worker.js": "/the-maze-gunner/service-worker.js",
     "static/css/main.24d63ffe.chunk.css.map": "/the-maze-gunner/static/css/main.24d63ffe.chunk.css.map",
     "static/js/2.2430ba27.chunk.js.LICENSE.txt": "/the-maze-gunner/static/js/2.2430ba27.chunk.js.LICENSE.txt",
@@ -111,6 +111,6 @@
     "static/js/runtime-main.8d3439e7.js",
     "static/js/2.2430ba27.chunk.js",
     "static/css/main.24d63ffe.chunk.css",
-    "static/js/main.32a0babd.chunk.js"
+    "static/js/main.60c31e98.chunk.js"
   ]
 }
