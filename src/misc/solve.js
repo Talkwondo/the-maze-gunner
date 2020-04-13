@@ -29,8 +29,8 @@ export const Solver = (maze, startPoint) => {
         this.root = startPose
         currentNode = this.root
       }
-      const [y, x] = pos.point // [4,5]
-      const path = moves.map(([yMove, xMove]) => [y + yMove, x + xMove]) // [5,5] // [4,4] // [3,5] // [4,6]
+      const [y, x] = pos.point
+      const path = moves.map(([yMove, xMove]) => [y + yMove, x + xMove])
       const filter = path.filter((path) => {
         if (path[0] > _widthLength - 1 || path[0] < 0 || path[1] > _heightLength - 1 ||
                   path[1] < 0 || maze[path[0]][path[1]] === 1) {
@@ -83,7 +83,6 @@ export const Solver = (maze, startPoint) => {
       return arr
     }
   }
-  // y↓ x→ --> y=row; x=index
   const startPose = new Node([startPoint[0], startPoint[1]], maze[startPoint[0]][startPoint[1]])
   const tree = new Tree()
   tree.grow(startPose, maze, [[startPoint[0], startPoint[1]]])
