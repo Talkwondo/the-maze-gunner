@@ -1,74 +1,40 @@
-<<<<<<< HEAD
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 # The-Maze-Gunner
-=======
-# the-maze-gunner
-The Maze Gunner is a one page website presenting solution of maze solver function in JavaScript
->>>>>>> b99cc29774c62954f7eb16ebcd34fbedafe49bff
+
+## The inspiration
+As I was pursuing a job for a higher web developer position, I had encountered a very challenging question on the board. This question took me several weeks to solve it, and finally I fully understand it. There are very few guides on the web with a reference for an efficient and short solution like I did, thus I published this for more web developers who wants to improve their skills on data structures and algorithms.
+
+## The question on the board
+"You need to write a function that gets two arguments: 2D array and a starting point, this function returns a boolean if the maze can be solved or not"
+
+The digits in the 2D array represents the following: 0 is a valid path, 1 is a wall and 2 is the exit.
+
+![The Maze](maze.png)
+
+
+## The solution approach
+
+1. Create a Node and a Tree classes.
+
+2. Make a recursive function within the Tree that increments the "state" location by valid moves.
+
+3. Filter the locations that exceeds the array and walls.
+
+4. Get array of up to four locations indicates the junctions.
+
+5. For ordered Tree by moves, check the delta of the last state location and make a switch statment.
+
+6. Assign the locations and call recursivly with the current location and Node.
+
+7. Treaverse over the Tree with Depth First Search and add to array the values.
+
+8. Get the results.
+
+
+
+# Visit the Site!
+
+[The Maze Gunner](https://talkwondo.github.io/the-maze-gunner/)
+
+
+Good Luck
+
