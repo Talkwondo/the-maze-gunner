@@ -129,7 +129,7 @@ footer {
   display: flex;
   flex-direction: column;
   text-align: center;
-  max-width: 50%;
+  max-width: 100%;
   align-self: center;
 }
 
