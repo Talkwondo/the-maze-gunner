@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e8d8f6a5c904533bbb6db0e1a103adf9",
+    "revision": "b0607fe714b409180cd825bb1844f0c6",
     "url": "/the-maze-gunner/index.html"
   },
   {
-    "revision": "d6268ceba16ddeef0886",
+    "revision": "655b40f069583c2d383f",
     "url": "/the-maze-gunner/static/css/main.ee5a04e5.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/the-maze-gunner/static/js/2.2430ba27.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d6268ceba16ddeef0886",
-    "url": "/the-maze-gunner/static/js/main.2df2778a.chunk.js"
+    "revision": "655b40f069583c2d383f",
+    "url": "/the-maze-gunner/static/js/main.49aa4767.chunk.js"
   },
   {
     "revision": "77a60e5473e8bfd4f0cf",
