@@ -30,9 +30,6 @@ footer {
   padding-top: 50px;
 }
 
-table {
-  margin-left: 15px;
-}
 /* Animation chevron */
 
 @keyframes move {
@@ -118,7 +115,7 @@ table {
 
 .code {
   max-width: 40%;
-  padding-left: 50px;
+  padding-left: 5%;
   overflow: auto;
   padding-top: 20px;
 }
@@ -176,6 +173,7 @@ table {
 
 .leftText {
   max-width: 70%;
+  min-width: 300px;
 }
 
 .mazeTitle {
@@ -194,8 +192,8 @@ table {
 
 .row {
   display: flex;
-  margin-top: 50px;
-  margin-left: 50px;
+  margin-top: 5%;
+  margin-left: 5%;
   margin-right: 50px;
   flex-direction: row;
   flex-wrap: wrap;
@@ -222,12 +220,13 @@ table {
 }
 
 .semi-container {
-  margin-left: 5em;
-  margin-right: 5em;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .solution {
   max-width: 60%;
+  min-width: 300px;
 }
 
 .spaceAside {
@@ -306,5 +305,11 @@ table {
   }
   .digit {
     font-size: 20px;
+  }
+  .avatar {
+    width: 100%;
+  }
+  table {
+    margin-left: 5%;
   }
 }

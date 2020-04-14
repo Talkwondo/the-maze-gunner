@@ -71,7 +71,7 @@ const Portfolio = () => {
         </section>
       </section>
       <footer>
-        <Grid columns='equal' inverted style={{ marginRight: '30px', marginLeft: '50px' }}>
+        <Grid columns='equal' inverted>
           <Grid.Column>
             <Segment>© Tal Talmon 2020</Segment>
           </Grid.Column>
