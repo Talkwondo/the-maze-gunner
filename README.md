@@ -1,4 +1,4 @@
-# The-Maze-Gunner
+# The Maze Gunner
 
 ## The inspiration
 As I was pursuing a job for a higher web developer position, I had encountered a very challenging question on the board. This question took me several weeks to solve it, and finally I fully understand it. There are very few guides on the web with a reference for an efficient and short solution like I did, thus I published this for more web developers who wants to improve their skills on data structures and algorithms.
