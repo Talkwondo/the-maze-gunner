@@ -94,9 +94,11 @@ export const code =
     }
   }
   // Constants and invocations
-  const startPose = new Node([1, 1], maze[1][1])
+  const startPose = new Node([startPoint[0], startPoint[1]], 
+    maze[startPoint[0]][startPoint[1]])
   const tree = new Tree()
-  tree.grow(startPose, maze, [[1, 1]])
+  tree.grow(startPose, maze, [[startPoint[0], 
+    startPoint[1]]])
   const result = tree.dfs(tree.root, [])
   const index = result.findIndex(arr => arr[0] === 2);
   return (index !== -1) ? true : false
