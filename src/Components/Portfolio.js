@@ -29,19 +29,19 @@ const Portfolio = () => {
           </div>
         </article>
         <section className="row">
-          <aside>
+          <aside className="leftText">
             <h2>The question on the board:</h2>
             <p>"You need to write a function that gets two arguments: 2D array and a starting point, this function returns a boolean if the maze can be solved or not"</p>
             <p><kbd>The digits in the 2D array represents the following: 0 is a valid path, 1 is a wall and 2 is the exit.</kbd></p>
             <p>I tried to solve it using iterations, but encountered a loop problem. Later on, I had been told that the solution should be solved in <span className="strong">DFS</span>, and then I thought, what the hell does that mean?</p>
             <p>I found that the best algorithm to solve a maze is the Trémaux's Algorithm, and it actually uses DFS (<a href="https://en.wikipedia.org/wiki/Depth-first_search" target="_blank" alt="DFS Algorithm" rel="noopener noreferrer">Depth First Search</a>) over a Tree.</p>
           </aside>
-          <aside className="rightText">
+          <aside className="rightGif">
             <img src={gif} className="gif" alt="maze exercise"/>
           </aside>
         </section>
-        <section className="row space">
-          <aside>
+        <section className="row">
+          <aside className="solution">
             <h2 style={{ textAlign: 'left', marginLeft: '10px' }}>The solution approach:</h2>
             <div className="codeFont">
               <p>When solving a complex maze there must be more than two directions, but most likely even three to four, thus we can not build a Binray Tree, instead we need to build a <a href="https://en.wikipedia.org/wiki/Tree_(graph_theory)" target="_blank" rel="noopener noreferrer">Graph Tree</a>.<br />
@@ -63,8 +63,8 @@ const Portfolio = () => {
               <Generator/>
             </div>
           </aside>
-          <aside>
-            <SyntaxHighlighter customStyle={true} className="code" language="javascript" style={vs2015}>
+          <aside className="code">
+            <SyntaxHighlighter customStyle={true} language="javascript" style={vs2015}>
               {code}
             </SyntaxHighlighter>
           </aside>

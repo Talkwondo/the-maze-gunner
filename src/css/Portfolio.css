@@ -117,9 +117,10 @@ table {
 }
 
 .code {
-  max-width: auto;
+  max-width: 40%;
+  padding-left: 50px;
   overflow: auto;
-  max-height: 80%p;
+  padding-top: 20px;
 }
 
 .codeFont {
@@ -143,9 +144,7 @@ table {
 }
 
 .gif {
-  max-width: 100%;
-  align-self: center;
-  width: auto;
+  width: 100%;
   height: auto;
 }
 
@@ -175,6 +174,10 @@ table {
   max-height: 285px;   
 }
 
+.leftText {
+  max-width: 70%;
+}
+
 .mazeTitle {
   font-size: 50;
   padding-top: 20px;
@@ -184,17 +187,19 @@ table {
   font-weight: 700;
 }
 
-.rightText {
-  align-self: center;
+.rightGif {
+  max-width: 30%;
+  margin-top: 20px;
 }
 
 .row {
   display: flex;
-  margin-top: 30px;
-  flex-direction: row;
-  justify-content: center;
+  margin-top: 50px;
   margin-left: 50px;
   margin-right: 50px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .scroll {
@@ -211,17 +216,22 @@ table {
   margin-left: -35px;
 }
 
+.section-container {
+ display: flex;
+ justify-content: center;
+}
+
 .semi-container {
   margin-left: 5em;
   margin-right: 5em;
 }
 
-.spaceAside {
-  justify-content: space-between
+.solution {
+  max-width: 60%;
 }
 
-.space {
-  margin-top: 10px;
+.spaceAside {
+  justify-content: space-between
 }
 
 .strong {
@@ -273,32 +283,7 @@ table {
 
 
 /* Media query */
-@media screen and (max-width: 1500px) {
-  .code {
-    max-width: 650px;
-  }
-}
-
-@media screen and (max-width: 1350px) {
-  .code {
-    max-width: 600px;
-  }
-}
-
-@media screen and (max-width: 1300px) {
-  .code {
-    max-width: 550px;
-  }
-}
-
-
-@media screen and (max-width: 1200px) {
-  .code {
-    max-width: 450px;
-  }
-}
-
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1000px) {
   .square {
     max-width: 35px;
     max-height: 35px;
@@ -306,93 +291,20 @@ table {
   .digit {
     font-size: 20px;
   }
-}
-
-@media screen and (max-width: 1000px) {
   .code {
-    max-width: 400px;
+    max-width: 500px;
   }
-  .digit {
-    font-size: 19px;
+  .rightGif {
+    max-width: 300px;
   }
-}
-
-@media screen and (max-width: 870px) {
-  .square {
-    max-width: 30px;
-    max-height: 30px;
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .code {
-    max-width: 300px;;
-  } 
-  .digit {
-    font-size: 17px;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .square {
-    max-width: 25px;
-    max-height: 25px;
-  }
-  .digit {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 675px) {
-  .square {
-    max-width: 21px;
-    max-height: 21px;
-  }
-  .code {
-    max-width: 200px;;
-  } 
 }
 
 @media screen and (max-width: 650px) {
-  .code {
-    max-width: 200px;;
-  } 
-}
-
-@media screen and (max-width: 610px) {
-  .code {
-    max-width: 100px;;
-  } 
-  .codeFont {
-    max-width: 400px;
-  }
-  .trySection {
-    max-width: 400px;
-  }
   .square {
-    max-width: 20px;
-    max-height: 20px;
+    max-width: 35px;
+    max-height: 35px;
   }
   .digit {
-    font-size: 10px;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .code {
-    max-width: 50px;;
-  } 
-  .codeFont {
-    max-width: 200px;
-  }
-  .trySection {
-    max-width: 200px;
-  }
-  .square {
-    max-width: 10px;
-    max-height: 10px;
-  }
-  .digit {
-    font-size: 5px;
+    font-size: 20px;
   }
 }
