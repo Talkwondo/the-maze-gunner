@@ -46,7 +46,7 @@ export const Animation = () => {
       if (yPos.y !== 0)
         window.scroll({ top: 0, behavior: 'smooth' })
 
-      window.addEventListener('wheel', function (e) {
+      window.addEventListener('mousewheel', function (e) {
         // remove sign
         scrollRef.className = 'hidden'
         // get screen y axis ref
