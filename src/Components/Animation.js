@@ -45,8 +45,7 @@ export const Animation = () => {
       // eslint-disable-next-line curly
       if (yPos.y !== 0)
         window.scroll({ top: 0, behavior: 'smooth' })
-
-      window.addEventListener('mousewheel', function (e) {
+      function animate (e) {
         // remove sign
         scrollRef.className = 'hidden'
         // get screen y axis ref
@@ -68,7 +67,9 @@ export const Animation = () => {
           }
           newLocation = currentLocation
         }
-      }, { passive: false })
+      }
+      window.addEventListener('wheel', animate, false)
+      window.addEventListener('touchmove', animate, false)
 
       function setImage () {
         ctx.fillRect(0, 0, window.innerWidth, window.innerHeight)
