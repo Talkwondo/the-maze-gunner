@@ -51,9 +51,13 @@ export const Animation = () => {
         // get screen y axis ref
         const yPos = ref.getBoundingClientRect();
         // disable scroll when reach to top
-        (currentLocation === imagesArr.length - 1 || yPos.y !== 0)
-          ? document.body.style.overflow = ''
-          : document.body.style.overflow = 'hidden'
+        if (currentLocation === imagesArr.length - 1 || yPos.y !== 0) {
+          document.body.style.overflow = ''
+          document.body.style.position = ''
+        } else {
+          document.body.style.overflow = 'hidden'
+          document.body.style.position = 'fixed'
+        }
         // enable animation only on top
         if (yPos.y === 0) {
           const delta = Math.max(-1, Math.min(1, e.deltaY))
