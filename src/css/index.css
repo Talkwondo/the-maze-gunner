@@ -2,4 +2,6 @@ body {
   margin: 0;
   background: #151515;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  position: relative;
 }
