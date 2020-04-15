@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/the-maze-gunner/precache-manifest.36507c522532ce775b3a3969da483197.js"
+  "/the-maze-gunner/precache-manifest.5ceb55d3358484862dd0daaf535dac60.js"
 );
 
 self.addEventListener('message', (event) => {
