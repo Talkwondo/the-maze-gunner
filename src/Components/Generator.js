@@ -34,6 +34,10 @@ const generateMaze = (makeMaze, makeResult, makePath) => {
   makePath([])
 }
 
+const shortPath = () => {
+
+}
+
 const SolvingMaze = (props, makeResult, makePath) => {
   if (props.board[0][0] === 'M') { return }
   const solution = Solver(props.board, props.startPoint);
@@ -84,8 +88,9 @@ export const Generator = props => {
         <Board/>
       </section>
       <section className="centerElement">
-        <Button inverted onClick={() => generateMaze(makeMaze, makeResult, makePath)}>Generate Maze</Button>
-        <Button primary inverted onClick={() => SolvingMaze(props, makeResult, makePath)}>SolveMaze</Button>
+        <Button style={{ marginLeft: '10px', marginRight: '10px' }} inverted onClick={() => generateMaze(makeMaze, makeResult, makePath)}>Generate Maze</Button>
+        <Button primary inverted onClick={() => SolvingMaze(props, makeResult, makePath)}>Solve Maze</Button>
+        <Button style={{ marginLeft: '5px' }}className="buttonSolve" color='green' inverted onClick={() => shortPath(props, makeResult, makePath)}>Short Path</Button>
       </section>
       <section className="centerElement">
         {props.result}

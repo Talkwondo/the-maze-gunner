@@ -46,21 +46,19 @@ export const Animation = () => {
       if (yPos.y !== 0)
         window.scroll({ top: 0, behavior: 'smooth' })
       function animate (e) {
+        console.log(e.deltaY)
         // remove sign
         scrollRef.className = 'hidden'
         // get screen y axis ref
         const yPos = ref.getBoundingClientRect();
         // disable scroll when reach to top
-        if (currentLocation === imagesArr.length - 1 || yPos.y !== 0) {
-          document.body.style.overflow = ''
-          document.body.style.position = ''
-        } else {
-          document.body.style.overflow = 'hidden'
-          document.body.style.position = 'fixed'
-        }
+        (currentLocation === imagesArr.length - 1 || yPos.y !== 0)
+          ? document.body.style.overflow = ''
+          : document.body.style.overflow = 'hidden'
         // enable animation only on top
         if (yPos.y === 0) {
           const delta = Math.max(-1, Math.min(1, e.deltaY))
+          console.log(delta)
           if (delta === -1) currentLocation -= 1
           if (delta === 1) currentLocation += 1
           if (currentLocation < 0) currentLocation = 0
@@ -73,8 +71,16 @@ export const Animation = () => {
         }
       }
       window.addEventListener('wheel', animate, false)
-      window.addEventListener('touchmove', animate, false)
-
+      // window.addEventListener('touchmove', animate, false)
+      window.addEventListener('touchmove', getTouchPos, false)
+      function getTouchPos (e) {
+        var touch = e.touches[0]
+        console.log(touch)
+        var mouseEvent = new WheelEvent('wheel', {
+          deltaY: touch.clientY
+        })
+        window.dispatchEvent(mouseEvent)
+      }
       function setImage () {
         ctx.fillRect(0, 0, window.innerWidth, window.innerHeight)
         ctx.drawImage(imagesArr[newLocation], 0, 0, window.innerWidth, window.innerHeight)
@@ -83,7 +89,7 @@ export const Animation = () => {
     })()
   })
   return (
-    <div>
+    <div className="container">
       <canvas className="img canvas" width={window.innerWidth} height={window.innerHeight} ref={canvasRef}/>
       <section ref={ scrollSignRef }>
         <div className="scroll chevron"></div>

@@ -1,6 +1,6 @@
 export const code =
 `function isSolve (maze, start) {
-  // Can be also diagonal
+  // Can be diagonal, but not our case
   const moves = [
       [+1, 0],
       [0, -1],
