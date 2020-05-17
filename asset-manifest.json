@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/the-maze-gunner/static/css/main.010cba45.chunk.css",
+    "main.css": "/the-maze-gunner/static/css/main.e1a6d596.chunk.css",
     "main.js": "/the-maze-gunner/static/js/main.a574b9da.chunk.js",
     "main.js.map": "/the-maze-gunner/static/js/main.a574b9da.chunk.js.map",
     "runtime-main.js": "/the-maze-gunner/static/js/runtime-main.8d3439e7.js",
@@ -8,9 +8,9 @@
     "static/js/2.b40e95c8.chunk.js": "/the-maze-gunner/static/js/2.b40e95c8.chunk.js",
     "static/js/2.b40e95c8.chunk.js.map": "/the-maze-gunner/static/js/2.b40e95c8.chunk.js.map",
     "index.html": "/the-maze-gunner/index.html",
-    "precache-manifest.17fa95b9a316995ccb42e4ff2cacccd4.js": "/the-maze-gunner/precache-manifest.17fa95b9a316995ccb42e4ff2cacccd4.js",
+    "precache-manifest.36fd4d39eca6da38a27e86eb1381a195.js": "/the-maze-gunner/precache-manifest.36fd4d39eca6da38a27e86eb1381a195.js",
     "service-worker.js": "/the-maze-gunner/service-worker.js",
-    "static/css/main.010cba45.chunk.css.map": "/the-maze-gunner/static/css/main.010cba45.chunk.css.map",
+    "static/css/main.e1a6d596.chunk.css.map": "/the-maze-gunner/static/css/main.e1a6d596.chunk.css.map",
     "static/js/2.b40e95c8.chunk.js.LICENSE.txt": "/the-maze-gunner/static/js/2.b40e95c8.chunk.js.LICENSE.txt",
     "static/media/3dsMax.jpg": "/the-maze-gunner/static/media/3dsMax.25255ffd.jpg",
     "static/media/3dsMax0001.jpg": "/the-maze-gunner/static/media/3dsMax0001.16f444bb.jpg",
@@ -110,7 +110,7 @@
   "entrypoints": [
     "static/js/runtime-main.8d3439e7.js",
     "static/js/2.b40e95c8.chunk.js",
-    "static/css/main.010cba45.chunk.css",
+    "static/css/main.e1a6d596.chunk.css",
     "static/js/main.a574b9da.chunk.js"
   ]
 }
