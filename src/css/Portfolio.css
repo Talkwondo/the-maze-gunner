@@ -15,17 +15,6 @@ p {
 
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
-
-body {
-  height: 95vh;
-  max-height: 95vh;
-  -ms-overflow-style: none;
-}
-
-
 h1 {
   font-family: 'MazeRunner';;
 
@@ -146,7 +135,6 @@ footer {
 }
 
 .container {
-  width: 100%;
   overflow: hidden;
 }
 
