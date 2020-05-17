@@ -46,7 +46,6 @@ export const Animation = () => {
       if (yPos.y !== 0)
         window.scroll({ top: 0, behavior: 'smooth' })
       function animate (e) {
-        console.log(e.deltaY)
         // remove sign
         scrollRef.className = 'hidden'
         // get screen y axis ref
@@ -58,7 +57,6 @@ export const Animation = () => {
         // enable animation only on top
         if (yPos.y === 0) {
           const delta = Math.max(-1, Math.min(1, e.deltaY))
-          console.log(delta)
           if (delta === -1) currentLocation -= 1
           if (delta === 1) currentLocation += 1
           if (currentLocation < 0) currentLocation = 0
@@ -70,17 +68,26 @@ export const Animation = () => {
           newLocation = currentLocation
         }
       }
+      // Listen to scrolling
+      let startPos = null
       window.addEventListener('wheel', animate, false)
-      // window.addEventListener('touchmove', animate, false)
+      window.addEventListener('touchstart', (e) => getStartPos(e, startPos), false)
       window.addEventListener('touchmove', getTouchPos, false)
+      // Get start point for mobile
+      function getStartPos (e) {
+        const touch = e.touches[0]
+        startPos = touch.clientY
+      }
+      // Get move points for mobile
       function getTouchPos (e) {
-        var touch = e.touches[0]
-        console.log(touch)
-        var mouseEvent = new WheelEvent('wheel', {
-          deltaY: touch.clientY
+        const touch = e.touches[0]
+        // eslint-disable-next-line no-undef
+        const mouseEvent = new WheelEvent('wheel', {
+          deltaY: -1 * (touch.clientY - startPos)
         })
         window.dispatchEvent(mouseEvent)
       }
+      // Set the images
       function setImage () {
         ctx.fillRect(0, 0, window.innerWidth, window.innerHeight)
         ctx.drawImage(imagesArr[newLocation], 0, 0, window.innerWidth, window.innerHeight)

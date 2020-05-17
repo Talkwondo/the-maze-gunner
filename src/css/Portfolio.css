@@ -20,6 +20,8 @@ body::-webkit-scrollbar {
 }
 
 body {
+  height: 95vh;
+  max-height: 95vh;
   -ms-overflow-style: none;
 }
 
@@ -145,7 +147,6 @@ footer {
 
 .container {
   width: 100%;
-  /* height: 100%; */
   overflow: hidden;
 }
 
