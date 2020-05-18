@@ -4,6 +4,7 @@ import { updateBoard, updateResult, showPath } from '../Actions/Action'
 import { Button, Message, Icon } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { Solver } from '../misc/solve'
+import { SolveShort } from '../misc/short'
 
 const generateMaze = (makeMaze, makeResult, makePath) => {
   // Generate Maze 9X9 with number 0 and 1
@@ -34,8 +35,21 @@ const generateMaze = (makeMaze, makeResult, makePath) => {
   makePath([])
 }
 
-const shortPath = () => {
-
+const shortPath = (props, makePath) => {
+  if (props.board[0][0] === 'M') { return }
+  const findExit = () => {
+    for (let i = 0; i < props.board.length; i++) {
+      for (let j = 0; j < props.board[0].length; j++) {
+        if (props.board[i][j] === 2) {
+          return [i, j]
+        }
+      }
+    }
+  }
+  const path = SolveShort(props.board, props.startPoint, findExit())
+  if (path) {
+    makePath(path)
+  }
 }
 
 const SolvingMaze = (props, makeResult, makePath) => {
@@ -90,7 +104,7 @@ export const Generator = props => {
       <section className="centerElement">
         <Button style={{ marginLeft: '10px', marginRight: '10px' }} inverted onClick={() => generateMaze(makeMaze, makeResult, makePath)}>Generate Maze</Button>
         <Button primary inverted onClick={() => SolvingMaze(props, makeResult, makePath)}>Solve Maze</Button>
-        <Button style={{ marginLeft: '5px' }}className="buttonSolve" color='green' inverted onClick={() => shortPath(props, makeResult, makePath)}>Short Path</Button>
+        <Button style={{ marginLeft: '5px' }} className="buttonSolve" color='green' inverted onClick={() => shortPath(props, makePath)}>Short Path</Button>
       </section>
       <section className="centerElement">
         {props.result}

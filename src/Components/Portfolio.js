@@ -59,7 +59,8 @@ const Portfolio = () => {
             </div>
             <div className="trySection">
               <h2>Try it yourself</h2>
-              <p>Below you can generate a random board and check if there is an exit. Moreover, you can see the path of the DFS highilighted. I have also added recently an option to find the shortest way to the exit using <a href="https://en.wikipedia.org/wiki/Breadth-first_search" target="_blank" alt="Breadth-first search Algorithm" rel="noopener noreferrer">Breadth First Search</a>.</p>
+              <p>Below you can generate a random board and check if there is an exit. Moreover, you can see the path of the DFS highilighted.
+                <br/>I have also added recently an option to find the shortest way to the exit. Surprisingly, I have found that DFS are the optimal solution of that, and not BFS, I wrote a blog on that in this<a href="" target="_blank"> link</a>.</p>
               <Generator/>
             </div>
           </aside>

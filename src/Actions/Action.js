@@ -7,14 +7,14 @@ export const updateBoard = (startPoint, randMaze) => {
   }
 }
 
-export const updateResult = (boolean) => {
+export const updateResult = boolean => {
   return {
     type: UPDATE_RESULT,
     payload: boolean
   }
 }
 
-export const showPath = (arr) => {
+export const showPath = arr => {
   return {
     type: SHOW_PATH,
     payload: arr

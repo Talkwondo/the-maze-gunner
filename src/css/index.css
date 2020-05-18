@@ -3,8 +3,6 @@ body {
   background: #151515;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  height: 95vh;
-  max-height: 95vh;
   transition: height 1000000s ease;
   -webkit-transition: height 1000000s ease;
   -moz-transition: height 1000000s ease;
