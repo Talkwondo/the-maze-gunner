@@ -60,7 +60,7 @@ const Portfolio = () => {
             <div className="trySection">
               <h2>Try it yourself</h2>
               <p>Below you can generate a random board and check if there is an exit. Moreover, you can see the path of the DFS highilighted.
-                <br/>I have also added recently an option to find the shortest way to the exit. Surprisingly, I have found that DFS are the optimal solution of that, and not BFS, I wrote a blog on that in this<a href="" target="_blank"> link</a>.</p>
+                <br/>I have also added recently an option to find the shortest way to the exit.</p>
               <Generator/>
             </div>
           </aside>
