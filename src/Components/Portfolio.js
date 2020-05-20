@@ -24,7 +24,7 @@ const Portfolio = () => {
           <div className="introduction">
             <p>As I was pursuing a job for a higher web developer position,
                 I had never thought I'd encounter such a challenging question on the board during an interview. For an intermediate web developer like me,
-              it almost made me use my <a href="http://www.imfdb.org/wiki/CAA_Tactical_RONI" target="_blank" rel="noopener noreferrer">Roni Carbine Gun</a>.</p>
+              it almost made me use my <a href="http://www.imfdb.org/wiki/CAA_Tactical_RONI" target="_blank" rel="noreferrer">Roni Carbine Gun</a>.</p>
             <p style={{ textAlign: 'center' }}>My demos here will use <a href="https://en.wikipedia.org/wiki/Recursion_(computer_science)" target="_blank" alt="Recursive Algorithm" rel="noopener noreferrer">Recursive Algorithm</a> to solve games in pure <kbd>JavaScript</kbd>.</p>
           </div>
         </article>
@@ -34,7 +34,7 @@ const Portfolio = () => {
             <p>"You need to write a function that gets two arguments: 2D array and a starting point, this function returns a boolean if the maze can be solved or not"</p>
             <p><kbd>The digits in the 2D array represents the following: 0 is a valid path, 1 is a wall and 2 is the exit.</kbd></p>
             <p>I tried to solve it using iterations, but encountered a loop problem. Later on, I had been told that the solution should be solved in <span className="strong">DFS</span>, and then I thought, what the hell does that mean?</p>
-            <p>I found that the best algorithm to solve a maze is the Trémaux's Algorithm, and it actually uses DFS (<a href="https://en.wikipedia.org/wiki/Depth-first_search" target="_blank" alt="DFS Algorithm" rel="noopener noreferrer">Depth First Search</a>) over a Tree.</p>
+            <p>I found that the best algorithm to solve a maze is the Trémaux's Algorithm, and it actually uses DFS (<a href="https://en.wikipedia.org/wiki/Depth-first_search" target="_blank" alt="DFS Algorithm" rel="noreferrer">Depth First Search</a>) over a Tree.</p>
           </aside>
           <aside className="rightGif">
             <img src={gif} className="gif" alt="maze exercise"/>
@@ -44,7 +44,7 @@ const Portfolio = () => {
           <aside className="solution">
             <h2 style={{ textAlign: 'left', marginLeft: '10px' }}>The solution approach:</h2>
             <div className="codeFont">
-              <p>When solving a complex maze there must be more than two directions, but most likely even three to four, thus we can not build a Binray Tree, instead we need to build a <a href="https://en.wikipedia.org/wiki/Tree_(graph_theory)" target="_blank" rel="noopener noreferrer">Graph Tree</a>.<br />
+              <p>When solving a complex maze there must be more than two directions, but most likely even three to four, thus we can not build a Binray Tree, instead we need to build a <a href="https://en.wikipedia.org/wiki/Tree_(graph_theory)" target="_blank" rel="noreferrer">Graph Tree</a>.<br />
                 There is a much shorter solution, if we just want to match a value of 2 in our search, it can be done
                 without making a Tree or DFS, but if we want to present all the possible moves, the following approach is better.</p>
               <p>Below is the milestones of the solution:</p>

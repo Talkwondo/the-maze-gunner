@@ -70,7 +70,7 @@ const SolvingMaze = (props, makeResult, makePath, makeMessage) => {
         <Message.Header>{solution[0]}  <Icon name='thumbs up' /></Message.Header>
       </Message>
       <Message className="textJson">
-        <Message.Header>Below is the Tree structure, and for a cool visual presentation, I recommend to copy and past it on <a href="https://vanya.jp.net/vtree/" target="_blank" rel="noopener noreferrer">this</a> website.</Message.Header>
+        <Message.Header>Below is the Tree structure, and for a cool visual presentation, I recommend to copy and past it on <a href="https://vanya.jp.net/vtree/" target="_blank" rel="noreferrer">this</a> website.</Message.Header>
         <span className="json">{solution[3]}</span>
       </Message>
     </div>
@@ -79,7 +79,7 @@ const SolvingMaze = (props, makeResult, makePath, makeMessage) => {
       <Message.Header>There is no exit  <Icon name='dont' /></Message.Header>
     </Message>
     <Message className="textJson">
-      <Message.Header className="spaceAside">Below is the Tree structure, and for a cool visual presentation, I recommend to copy and past it on <a href="https://vanya.jp.net/vtree/" target="_blank" rel="noopener noreferrer">this</a> website.</Message.Header>
+      <Message.Header className="spaceAside">Below is the Tree structure, and for a cool visual presentation, I recommend to copy and past it on <a href="https://vanya.jp.net/vtree/" target="_blank" rel="noreferrer">this</a> website.</Message.Header>
       <div className="json">{solution[3]}</div>
     </Message>
     </div>)
