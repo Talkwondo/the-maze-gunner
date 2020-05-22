@@ -50,13 +50,18 @@ const shortPath = (props, makePath, makeMessage, makeResult) => {
     }
   }
   const path = SolveShort(props.board, props.startPoint, findExit())
-  if (path) {
-    makePath(path)
+  if (path[0]) {
+    makePath(path[0])
     makeResult()
-    makeMessage(
+    makeMessage(<div className="column">
       <Message positive>
-        <Message.Header>{`The length of the path is ${path.length - 1}`}  <Icon name='map' /></Message.Header>
+        <Message.Header>{`The length of the path is ${path[0].length - 1}`}  <Icon name='map' /></Message.Header>
       </Message>
+      <Message className="textJson">
+        <Message.Header>Below is the Tree structure, and for a cool visual presentation, I recommend to copy and past it on <a href="https://vanya.jp.net/vtree/" target="_blank" rel="noreferrer">this</a> website.</Message.Header>
+        <span className="json">{path[1]}</span>
+      </Message>
+    </div>
     )
   }
 }
