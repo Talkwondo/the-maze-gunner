@@ -59,8 +59,8 @@ const Portfolio = () => {
             </div>
             <div className="trySection">
               <h2>Try it yourself</h2>
-              <p>Below you can generate a random board and check if there is an exit. Moreover, you can see the path of the DFS highilighted.
-                <br/>I have also added recently an option to find the shortest way to the exit.</p>
+              <p>Below you can generate a random board and check if there is an exit. Moreover, you can see the path of the DFS highilighted.</p>
+              <p>Recently I have also added an option to find the shortest path to the exit, I actually made a custome algorithm fot that. this get be also for use for navigation, and I made an article about it.</p>
               <Generator/>
             </div>
           </aside>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Board from '../Components/Board'
 import { updateBoard, updateResult, showPath } from '../Actions/Action'
 import { Button, Message, Icon } from 'semantic-ui-react'
@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { Solver } from '../misc/solve'
 import { SolveShort } from '../misc/short'
 
-const generateMaze = (makeMaze, makeResult, makePath, makeMessage) => {
+const generateMaze = (makeMaze, makeResult, makePath) => {
   // Generate Maze 9X9 with number 0 and 1
   const randMaze = new Array(9).fill(null).map(() => new Array(9).fill(null))
   for (let i = 0; i < 9; i++) {
@@ -35,10 +35,9 @@ const generateMaze = (makeMaze, makeResult, makePath, makeMessage) => {
   makeMaze(startPoint, randMaze)
   makeResult(<div></div>)
   makePath([])
-  makeMessage('')
 }
 
-const shortPath = (props, makePath, makeMessage, makeResult) => {
+const shortPath = (props, makePath, makeResult) => {
   if (props.board[0][0] === 'M') { return }
   const findExit = () => {
     for (let i = 0; i < props.board.length; i++) {
@@ -52,8 +51,7 @@ const shortPath = (props, makePath, makeMessage, makeResult) => {
   const path = SolveShort(props.board, props.startPoint, findExit())
   if (path[0]) {
     makePath(path[0])
-    makeResult()
-    makeMessage(<div className="column">
+    makeResult(<div className="column">
       <Message positive>
         <Message.Header>{`The length of the path is ${path[0].length - 1}`}  <Icon name='map' /></Message.Header>
       </Message>
@@ -61,12 +59,11 @@ const shortPath = (props, makePath, makeMessage, makeResult) => {
         <Message.Header>Below is the Tree structure, and for a cool visual presentation, I recommend to copy and past it on <a href="https://vanya.jp.net/vtree/" target="_blank" rel="noreferrer">this</a> website.</Message.Header>
         <span className="json">{path[1]}</span>
       </Message>
-    </div>
-    )
+    </div>)
   }
 }
 
-const SolvingMaze = (props, makeResult, makePath, makeMessage) => {
+const SolvingMaze = (props, makeResult, makePath) => {
   if (props.board[0][0] === 'M') { return }
   const solution = Solver(props.board, props.startPoint);
   (solution[1])
@@ -88,7 +85,6 @@ const SolvingMaze = (props, makeResult, makePath, makeMessage) => {
       <div className="json">{solution[3]}</div>
     </Message>
     </div>)
-  makeMessage('')
   makePath(solution[2])
 }
 
@@ -109,7 +105,6 @@ const mapStateToProps = state => {
 }
 
 export const Generator = props => {
-  const [message, makeMessage] = useState('')
   const { makeMaze, makeResult, makePath } = props
   return (
     <main>
@@ -117,12 +112,9 @@ export const Generator = props => {
         <Board/>
       </section>
       <section className="centerElement">
-        <Button style={{ marginLeft: '10px', marginRight: '10px' }} inverted onClick={() => generateMaze(makeMaze, makeResult, makePath, makeMessage)}>Generate Maze</Button>
-        <Button primary inverted onClick={() => SolvingMaze(props, makeResult, makePath, makeMessage)}>Solve Maze</Button>
-        <Button style={{ marginLeft: '5px' }} className="buttonSolve" color='green' inverted onClick={() => shortPath(props, makePath, makeMessage, makeResult)}>Short Path</Button>
-      </section>
-      <section className="centerElement">
-        {message}
+        <Button style={{ marginLeft: '10px', marginRight: '10px' }} inverted onClick={() => generateMaze(makeMaze, makeResult, makePath)}>Generate Maze</Button>
+        <Button primary inverted onClick={() => SolvingMaze(props, makeResult, makePath)}>Solve Maze</Button>
+        <Button style={{ marginLeft: '5px' }} className="buttonSolve" color='green' inverted onClick={() => shortPath(props, makePath, makeResult)}>Short Path</Button>
       </section>
       <section className="centerElement">
         {props.result}
