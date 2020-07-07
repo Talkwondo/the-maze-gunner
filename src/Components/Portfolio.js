@@ -44,7 +44,7 @@ const Portfolio = () => {
           <aside className="solution">
             <h2 style={{ textAlign: 'left', marginLeft: '10px' }}>The solution approach:</h2>
             <div className="codeFont">
-              <p>When solving a complex maze there must be more than two directions, but most likely even three to four, thus we can not build a Binray Tree, instead we need to build a <a href="https://en.wikipedia.org/wiki/Tree_(graph_theory)" target="_blank" rel="noreferrer">Graph Tree</a>.<br />
+              <p>When solving a complex maze there must at least two directions to move, but most likely three to four, thus we can not build a Binary Tree, instead we need to build a <a href="https://en.wikipedia.org/wiki/Tree_(graph_theory)" target="_blank" rel="noreferrer">Graph Tree</a>.<br />
                 There is a much shorter solution, if we just want to match a value of 2 in our search, it can be done
                 without making a Tree or DFS, but if we want to present all the possible moves, the following approach is better.</p>
               <p>Below is the milestones of the solution:</p>
@@ -52,15 +52,15 @@ const Portfolio = () => {
               <p>2. Make a recursive function within the Tree that increments the "state" location by valid moves.</p>
               <p>3. Filter the locations that exceeds the array and walls.</p>
               <p>4. Get array of up to four locations indicates the junctions.</p>
-              <p>5. For ordered Tree by moves, check the delta of the last state location and make a switch statment.</p>
-              <p>6. Assign the locations and call recursivly with the current location and Node.</p>
-              <p>7. Treaverse over the Tree with Depth First Search and add to array the values.</p>
+              <p>5. For ordered Tree by moves, check the delta of the last state location and make a switch statement.</p>
+              <p>6. Assign the locations and call recursively with the current location and Node.</p>
+              <p>7. Traverse over the Tree with Depth First Search and add to array the values.</p>
               <p>8. Get the results.</p>
             </div>
             <div className="trySection">
               <h2>Try it yourself</h2>
-              <p>Below you can generate a random board and check if there is an exit. Moreover, you can see the path of the DFS highilighted.</p>
-              <p>Recently I have also added an option to find the shortest path to the exit, I actually made a custome algorithm fot that. this get be also for use for navigation, and I made an article about it.</p>
+              <p>Below you can generate a random board and check if there is an exit. Moreover, you can see the path of the DFS highlighted.</p>
+              <p>Recently I have also added an option to find the shortest path to the exit, I actually made a custom algorithm for that. this get be also for use for navigation, and I made an <a href="https://medium.com/@tal_45432/finding-the-real-shortest-path-in-javascript-depth-first-search-93a3ce514250" target="_blank">article</a> about it.</p>
               <Generator/>
             </div>
           </aside>

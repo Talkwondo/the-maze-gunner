@@ -55,11 +55,11 @@ const shortPath = (props, makePath, makeResult) => {
       <Message positive>
         <Message.Header>{`The length of the path is ${path[0].length - 1}`}  <Icon name='map' /></Message.Header>
       </Message>
-      <Message className="textJson">
-        <Message.Header>Below is the Tree structure, and for a cool visual presentation, I recommend to copy and past it on <a href="https://vanya.jp.net/vtree/" target="_blank" rel="noreferrer">this</a> website.</Message.Header>
-        <span className="json">{path[1]}</span>
-      </Message>
     </div>)
+  } else {
+    makeResult(<div className="column"><Message error>
+      <Message.Header>There is no exit  <Icon name='dont' /></Message.Header>
+    </Message></div>)
   }
 }
 

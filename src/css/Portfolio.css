@@ -318,3 +318,22 @@ footer {
     margin-left: 5%;
   }
 }
+
+@media screen and (min-width: 1920px) {
+  .square {
+    max-width: 50px;
+    max-height: 50px;
+  }
+  .digit {
+    font-size: 30px;
+  }
+  p {
+    font-size: 30px;
+  }
+  .code {
+    max-width: 700px;
+  }
+  .rightGif {
+    max-width: 400px;
+  }
+}
