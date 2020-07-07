@@ -60,7 +60,7 @@ const Portfolio = () => {
             <div className="trySection">
               <h2>Try it yourself</h2>
               <p>Below you can generate a random board and check if there is an exit. Moreover, you can see the path of the DFS highlighted.</p>
-              <p>Recently I have also added an option to find the shortest path to the exit, I actually made a custom algorithm for that. this get be also for use for navigation, and I made an <a href="https://medium.com/@tal_45432/finding-the-real-shortest-path-in-javascript-depth-first-search-93a3ce514250" target="_blank">article</a> about it.</p>
+              <p>Recently I have also added an option to find the shortest path to the exit, I actually made a custom algorithm for that and I made an <a href="https://medium.com/@tal_45432/finding-the-real-shortest-path-in-javascript-depth-first-search-93a3ce514250" target="_blank">article</a> about it.</p>
               <Generator/>
             </div>
           </aside>
